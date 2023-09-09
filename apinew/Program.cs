@@ -10,14 +10,24 @@ using System.Text;
 using static System.Net.Mime.MediaTypeNames;
 
 var client = new HttpClient();
+var cliente = new HttpClient();
 string pokemonnn = "";
 string pokedex = "valor1";
 string elegido = "";
 string remplazo = "";
 int vidas = 6;
+string url = "";
+int num =0;
 StringBuilder remplazado = new StringBuilder(remplazo);
 
 List<string> elementos = new List<string>();
+List<string> elementoss = new List<string>();
+List<string> tipop = new List<string>();
+string tipokemon = "";
+string powerpokemon = "";
+string peso = "";
+
+
 
 
 var request = new HttpRequestMessage
@@ -44,16 +54,19 @@ using (var response = await client.SendAsync(request))
     {
         
         string nombre = (string)result["name"];
+        string enlace = (string)result["url"];
       
         pokemonnn = nombre;
         elementos.Add(nombre);
+        elementoss.Add(enlace);
 
         Console.WriteLine($"Nombre: {nombre}");
         i++;
     }
     Random r = new Random();
-
-    elegido= elementos[r.Next(0, elementos.Count)];
+    int pez=r.Next(0, elementos.Count);
+    url= elementoss[pez];
+    elegido = elementos[pez];
      
     for(int p=0;p<=elegido.Length-1;p++)
     {
@@ -61,8 +74,126 @@ using (var response = await client.SendAsync(request))
     }
   
    
+    //tablero();
+}
+Console.WriteLine("uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu");
+var linkkkk = new HttpRequestMessage
+{
+    Method = HttpMethod.Get,
+    //RequestUri = new Uri("https://pokedex2.p.rapidapi.com/pokedex/usa/pikachu"),
+    /*Headers =
+    {
+        { "X-RapidAPI-Key", "8b612b5078msheef33a9277fb744p1dbfddjsne0206765bd88" },
+        { "X-RapidAPI-Host", "pokedex2.p.rapidapi.com" },
+    },*/
+    RequestUri = new Uri(url)
+};
+using (var respuesta = await cliente.SendAsync(linkkkk))
+{
+    respuesta.EnsureSuccessStatusCode();
+    string poke = await respuesta.Content.ReadAsStringAsync();
+    Console.WriteLine(poke);
+    JObject jsonObject = JsonConvert.DeserializeObject<JObject>(poke);
+
+    string  resultsArray = jsonObject["weight"].ToString();
+    // JArray resultsArrays = (JArray)jsonObject["weight"];
+
+    peso= resultsArray;
+    
+    
+
+        
+
+     
+
+
+       
+
+
+    
+
+
+}
+Console.WriteLine("uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu");
+var linkk = new HttpRequestMessage
+{
+    Method = HttpMethod.Get,
+    //RequestUri = new Uri("https://pokedex2.p.rapidapi.com/pokedex/usa/pikachu"),
+    /*Headers =
+    {
+        { "X-RapidAPI-Key", "8b612b5078msheef33a9277fb744p1dbfddjsne0206765bd88" },
+        { "X-RapidAPI-Host", "pokedex2.p.rapidapi.com" },
+    },*/
+    RequestUri = new Uri(url)
+};
+using (var respuesta = await cliente.SendAsync(linkk))
+{
+    respuesta.EnsureSuccessStatusCode();
+    string poke = await respuesta.Content.ReadAsStringAsync();
+    Console.WriteLine(poke);
+    JObject jsonObject = JsonConvert.DeserializeObject<JObject>(poke);
+
+    JArray resultsArray = (JArray)jsonObject["abilities"];
+    // JArray resultsArrays = (JArray)jsonObject["weight"];
+
+    int i = 0;
+    foreach (JObject result in resultsArray)
+    {
+
+        string habilidad = (string)result["ability"]["name"];
+        
+       powerpokemon = powerpokemon + " " + habilidad;
+
+
+        Console.WriteLine($"Nombre: {habilidad}");
+
+
+    }
+
+
+}
+Console.WriteLine("uuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuuu");
+var linkkk = new HttpRequestMessage
+{
+    Method = HttpMethod.Get,
+    //RequestUri = new Uri("https://pokedex2.p.rapidapi.com/pokedex/usa/pikachu"),
+    /*Headers =
+    {
+        { "X-RapidAPI-Key", "8b612b5078msheef33a9277fb744p1dbfddjsne0206765bd88" },
+        { "X-RapidAPI-Host", "pokedex2.p.rapidapi.com" },
+    },*/
+    RequestUri = new Uri(url)
+};
+using (var respuesta = await cliente.SendAsync(linkkk))
+{
+    respuesta.EnsureSuccessStatusCode();
+    string poke = await respuesta.Content.ReadAsStringAsync();
+    Console.WriteLine(poke);
+    JObject jsonObject = JsonConvert.DeserializeObject<JObject>(poke);
+
+    JArray resultsArray = (JArray)jsonObject["types"];
+   // JArray resultsArrays = (JArray)jsonObject["weight"];
+
+    int i = 0;
+    foreach (JObject result in resultsArray)
+    {
+
+        string tipo = (string)result["type"]["name"];
+        tipop.Add(tipo);
+        tipokemon=tipokemon+" "+ tipo;
+
+
+        Console.WriteLine($"Nombre: {tipo}");
+
+
+    }
+   
+
     tablero();
 }
+
+
+
 void responder()
 {
     int existe = 0;
@@ -90,6 +221,8 @@ void responder()
 void fin()
 {
     Console.WriteLine("Gracias por jugar :)");
+  
+
     Environment.Exit(0);
 }
 void tablero()
@@ -172,7 +305,11 @@ void tablero()
     {
         Console.WriteLine("perdiste");
         Console.WriteLine("El pokemon era: "+elegido);
-
+        Console.WriteLine("tipo:" + tipokemon);
+        Console.WriteLine("habilidades:" + powerpokemon);
+        Console.WriteLine("peso:" + peso);
+        // Console.WriteLine("tipo:" + tipop[0]);
+        Console.WriteLine(url);
         Console.WriteLine("Ingresa una [r] para reiniciar o cualquier caracter para salir");
         char opcion = char.Parse(Console.ReadLine().ToLower());
         switch (opcion)
@@ -201,6 +338,14 @@ void tablero()
     if (elegido==remplazo)
     {
         Console.WriteLine("ganaste");
+        Console.WriteLine("Pokemon: "+elegido);
+        Console.WriteLine("tipo:" + tipokemon);
+        Console.WriteLine("habilidades:" + powerpokemon);
+        Console.WriteLine("peso:" + peso);
+        // Console.WriteLine("tipo:" + tipop[0]);
+        Console.WriteLine(url);
+
+
         Console.WriteLine("Ingresa una [r] para reiniciar o cualquier caracter para salir");
         char opcion = char.Parse(Console.ReadLine().ToLower());
         switch(opcion)

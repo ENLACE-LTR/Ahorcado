@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "yAr9RabqWc/OCmd2btJn2lQOxS+4Ss68RPvO7y732ruSg9vdYKqtWEERXBsnX8sX7fsl2jdQtIN8J5BvCGl11A==",
+  "dgSpecHash": "vfZN4MQhpUMTuY2LVbPquFbt2CodIi4Xk2B1StUptSL482wKrSTeCRKxMlFwTGfgzCCVpB96XxRjbORTiLijeQ==",
   "success": true,
-  "projectFilePath": "C:\\Users\\consulta\\Desktop\\github projects\\trabajos_git\\ahorcado.v3\\apinew\\apinew.csproj",
+  "projectFilePath": "C:\\Users\\consulta\\Desktop\\github projects\\Ahorcado\\apinew\\apinew.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\consulta\\.nuget\\packages\\newtonsoft.json\\13.0.3\\newtonsoft.json.13.0.3.nupkg.sha512"
   ],

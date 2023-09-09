@@ -61,11 +61,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "C:\\Users\\consulta\\Desktop\\github projects\\trabajos_git\\ahorcado.v3\\apinew\\apinew.csproj",
+      "projectUniqueName": "C:\\Users\\consulta\\Desktop\\github projects\\Ahorcado\\apinew\\apinew.csproj",
       "projectName": "apinew",
-      "projectPath": "C:\\Users\\consulta\\Desktop\\github projects\\trabajos_git\\ahorcado.v3\\apinew\\apinew.csproj",
+      "projectPath": "C:\\Users\\consulta\\Desktop\\github projects\\Ahorcado\\apinew\\apinew.csproj",
       "packagesPath": "C:\\Users\\consulta\\.nuget\\packages\\",
-      "outputPath": "C:\\Users\\consulta\\Desktop\\github projects\\trabajos_git\\ahorcado.v3\\apinew\\obj\\",
+      "outputPath": "C:\\Users\\consulta\\Desktop\\github projects\\Ahorcado\\apinew\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"

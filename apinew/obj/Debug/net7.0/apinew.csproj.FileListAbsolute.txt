@@ -66,3 +66,20 @@ C:\Users\consulta\Desktop\ahorcado.v2\apinew\obj\Debug\net7.0\refint\apinew.dll
 C:\Users\consulta\Desktop\ahorcado.v2\apinew\obj\Debug\net7.0\apinew.pdb
 C:\Users\consulta\Desktop\ahorcado.v2\apinew\obj\Debug\net7.0\apinew.genruntimeconfig.cache
 C:\Users\consulta\Desktop\ahorcado.v2\apinew\obj\Debug\net7.0\ref\apinew.dll
+C:\Users\consulta\Desktop\github projects\Ahorcado\apinew\bin\Debug\net7.0\apinew.exe
+C:\Users\consulta\Desktop\github projects\Ahorcado\apinew\bin\Debug\net7.0\apinew.deps.json
+C:\Users\consulta\Desktop\github projects\Ahorcado\apinew\bin\Debug\net7.0\apinew.runtimeconfig.json
+C:\Users\consulta\Desktop\github projects\Ahorcado\apinew\bin\Debug\net7.0\apinew.dll
+C:\Users\consulta\Desktop\github projects\Ahorcado\apinew\bin\Debug\net7.0\apinew.pdb
+C:\Users\consulta\Desktop\github projects\Ahorcado\apinew\bin\Debug\net7.0\Newtonsoft.Json.dll
+C:\Users\consulta\Desktop\github projects\Ahorcado\apinew\obj\Debug\net7.0\apinew.csproj.AssemblyReference.cache
+C:\Users\consulta\Desktop\github projects\Ahorcado\apinew\obj\Debug\net7.0\apinew.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\consulta\Desktop\github projects\Ahorcado\apinew\obj\Debug\net7.0\apinew.AssemblyInfoInputs.cache
+C:\Users\consulta\Desktop\github projects\Ahorcado\apinew\obj\Debug\net7.0\apinew.AssemblyInfo.cs
+C:\Users\consulta\Desktop\github projects\Ahorcado\apinew\obj\Debug\net7.0\apinew.csproj.CoreCompileInputs.cache
+C:\Users\consulta\Desktop\github projects\Ahorcado\apinew\obj\Debug\net7.0\apinew.csproj.CopyComplete
+C:\Users\consulta\Desktop\github projects\Ahorcado\apinew\obj\Debug\net7.0\apinew.dll
+C:\Users\consulta\Desktop\github projects\Ahorcado\apinew\obj\Debug\net7.0\refint\apinew.dll
+C:\Users\consulta\Desktop\github projects\Ahorcado\apinew\obj\Debug\net7.0\apinew.pdb
+C:\Users\consulta\Desktop\github projects\Ahorcado\apinew\obj\Debug\net7.0\apinew.genruntimeconfig.cache
+C:\Users\consulta\Desktop\github projects\Ahorcado\apinew\obj\Debug\net7.0\ref\apinew.dll
